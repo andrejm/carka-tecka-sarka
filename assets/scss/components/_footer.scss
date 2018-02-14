@@ -1,0 +1,22 @@
+footer {
+
+	@include xy-grid-container();
+	
+	@include breakpoint( medium ) {
+	}
+}
+
+.footer {
+	@include xy-grid();
+	
+	@include breakpoint( medium ) {
+	}
+
+	&__part {
+		@include xy-cell( 12 );
+		
+		@include breakpoint( medium ) {
+			@include xy-cell( 4 );
+		}
+	}
+}

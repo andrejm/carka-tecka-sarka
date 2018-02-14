@@ -1,0 +1,60 @@
+header {
+
+	@include xy-grid-container();
+	
+	@include breakpoint( large ) {
+	}
+}
+
+.header {
+	@include xy-grid();
+	
+	@include breakpoint( large ) {
+	}
+
+	&__part {
+		@include xy-cell( 12 );
+		order: 2;
+
+		&--carka {
+			order: 1;
+			display: flex;
+			justify-content: flex-end;
+			margin-top: rem-calc( -18 );
+
+			@include breakpoint( large ) {
+				order: 2;
+			}
+		}
+
+		&--menu {
+			@include breakpoint( large ) {
+				flex-basis: 100%;
+			}
+
+			@include breakpoint( xlarge ) {
+				flex-basis: auto;
+			}
+		}
+		
+		@include breakpoint( large ) {
+			@include xy-cell( 4 );
+		}
+	}
+
+	&__logo {
+		display: flex;
+		justify-content: center;
+		padding: rem-calc( 15 0 );
+
+		@include breakpoint( large ) {
+			justify-content: flex-start;
+		}
+	}
+
+	&__carka {
+		max-width: rem-calc( 30 );
+		max-height: rem-calc( 50 );
+	}
+	
+}
