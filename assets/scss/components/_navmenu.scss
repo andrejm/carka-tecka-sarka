@@ -3,7 +3,11 @@
 
 	display: flex;
 	justify-content: space-between;
-		margin: rem-calc( 10 0 15 0 );
+	margin: rem-calc( 10 0 15 0 );
+
+	@include breakpoint( large ) {
+		margin: 0;
+	}
 
 	&--footer {
 		justify-content: center;

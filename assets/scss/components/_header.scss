@@ -16,6 +16,10 @@ header {
 		@include xy-cell( 12 );
 		order: 2;
 
+		@include breakpoint( large ) {
+			@include xy-cell( 3 );
+		}
+		
 		&--carka {
 			order: 1;
 			display: flex;
@@ -24,12 +28,14 @@ header {
 
 			@include breakpoint( large ) {
 				order: 2;
+				@include xy-cell( 3 );
 			}
 		}
 
 		&--menu {
 			@include breakpoint( large ) {
 				flex-basis: 100%;
+				@include xy-cell( 6 );
 			}
 
 			@include breakpoint( xlarge ) {
@@ -37,9 +43,6 @@ header {
 			}
 		}
 		
-		@include breakpoint( large ) {
-			@include xy-cell( 4 );
-		}
 	}
 
 	&__logo {

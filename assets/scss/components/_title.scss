@@ -1,0 +1,41 @@
+.title {
+
+	@include xy-grid-container();
+
+	background: transparent url( '../images/carka.svg' ) no-repeat 5% 0%;
+	background-size: 8%;
+	padding-top: rem-calc( 25 );
+	padding-bottom: rem-calc( 25 );
+	padding-left: 18%;
+	margin: rem-calc( 30 0 );
+
+	@include breakpoint( medium ) {
+		background-size: 6%;
+		padding-top: rem-calc( 100 );
+		padding-left: 14%;
+	}
+
+	&__maintitle {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: rem-calc( 42 );
+		line-height: 1.1;
+
+		@include breakpoint( medium ) {
+			br {
+				display: none;
+			}
+
+			font-size: rem-calc( 48 );
+		}
+	}
+
+	&__subtitle {
+		color: $secondary-color;
+		font-size: rem-calc( 16 );
+
+		@include breakpoint( medium ) {
+			font-size: rem-calc( 18 );
+		}
+	}
+}
