@@ -1,0 +1,7 @@
+.references {
+	@include xy-grid();
+
+	&__inner {
+		@include xy-cell( 12 );
+	}
+}

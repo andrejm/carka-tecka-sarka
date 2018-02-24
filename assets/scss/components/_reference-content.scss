@@ -1,0 +1,16 @@
+.reference-content {
+	font-size: rem-calc( 14 );
+	border: 0;
+	
+	&__title {
+		font-weight: bold;
+		text-transform: uppercase;
+		font-size: rem-calc( 14 );
+	}
+
+	&__link {
+		text-transform: uppercase;
+		color: $secondary-color;
+
+	}
+}

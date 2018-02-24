@@ -1,0 +1,38 @@
+.reference-grid {
+	@include xy-grid();
+
+	&__head {
+		@include xy-cell( 12 );
+
+		@include breakpoint( large ) {
+			@include xy-cell( 10 );
+			@include xy-cell-offset( 2 );
+		}
+	}
+
+	&__main {
+		@include xy-cell( 12 );
+
+		@include breakpoint( medium ) {
+			@include xy-cell( 9 );
+
+		}
+
+		@include breakpoint( large ) {
+			@include xy-cell( 7 );
+			@include xy-cell-offset( 2 );
+		}
+	}
+
+	&__side {
+		@include xy-cell( 12 );
+
+		@include breakpoint( medium ) {
+			@include xy-cell( 3 );
+		}
+
+		@include breakpoint( large ) {
+			
+		}
+	}
+}

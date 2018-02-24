@@ -1,0 +1,50 @@
+.reference-head {
+
+	border: 0;
+	border-top: 1px solid $super-light-gray;
+
+	&::before {
+		display: none;
+
+		@include breakpoint( medium ) {
+			display: block;
+			color: $secondary-color;
+			font-size: rem-calc( 60 );
+			margin-top: 0;
+			transform: translateY(-50%);
+		}
+	}
+
+	&:hover {
+		background-color: transparent;
+	}
+
+	&:focus {
+		background-color: transparent;
+	}
+
+	&__order {
+		color: $secondary-color;
+		font-size: rem-calc( 12 );
+	}
+
+	&__maintitle {
+		color: $black;
+		font-size: rem-calc( 25 );
+		font-weight: bold;
+	}
+
+	&__excerpt {
+		color: $black;
+
+		@include breakpoint( medium ) {
+			font-size: rem-calc( 18 );
+			max-width: 60%;
+		}
+	}
+
+	&__action {
+		color: $secondary-color;
+		text-transform: uppercase;
+	}
+}

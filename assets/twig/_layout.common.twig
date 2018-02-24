@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-{% include '_gtm_HEAD.twig' %}
+{# {% include '_gtm_HEAD.twig' %} #}
 
         <title>{{ block('title') }} | Čárka - tečka - Šárka</title>
         <meta name="description" content="">
@@ -24,7 +24,7 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-{% include '_gtm_BODY.twig' %}
+{# {% include '_gtm_BODY.twig' %} #}
 
         <header>
             <div class="header">
@@ -49,7 +49,9 @@
 
         {% block page %}{% endblock %}
 
-        <script src="dist/js/jquery.min.js"></script>
+        {# <script src="dist/js/jquery.min.js"></script> #}
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        {# <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js" crossorigin="anonymous"></script> #}
         <script src="dist/js/main.js"></script>
 
         <script>
@@ -78,6 +80,7 @@
                 </div>
             </section>
         </footer>
+
 
     </body>
 </html>

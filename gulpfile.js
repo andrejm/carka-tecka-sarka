@@ -27,10 +27,11 @@ var paths = {
         // TODO temporarily loading from dist folder, find out how to load original files
         // https://foundation.zurb.com/forum/posts/53440-foundation-custom-gulp---uncaught-referenceerror-exports-is-not-defined
 
-        'node_modules/foundation-sites/dist/js/foundation.core.js', //must be loaded
-        'node_modules/foundation-sites/dist/js/foundation.util.mediaQuery.js', //must be loaded
-        'node_modules/foundation-sites/dist/js/foundation.smoothScroll.js',
-        // 'node_modules/foundation-sites/js/foundation.util.keyboard.js',
+        'node_modules/foundation-sites/dist/js/plugins/foundation.core.js', //must be loaded
+        'node_modules/foundation-sites/dist/js/plugins/foundation.util.mediaQuery.js', //must be loaded
+        'node_modules/foundation-sites/dist/js/plugins/foundation.accordion.js',
+        'node_modules/foundation-sites/dist/js/plugins/foundation.util.keyboard.js',
+        // 'node_modules/foundation-sites/js/foundation.smoothScroll.js',
         // 'node_modules/foundation-sites/js/foundation.util.motion.js',
         // 'node_modules/foundation-sites/js/foundation.util.timerAndImageLoader.js',
         // 'node_modules/foundation-sites/js/foundation.util.touch.js',
