@@ -391,6 +391,20 @@ functions.unhandled();}}},/**
  * Constants for easier comparing.
  * Can be used like Foundation.parseKey(event) === Foundation.keys.SPACE
  */function getKeyCodes(kcs){var k={};for(var kc in kcs){k[kcs[kc]]=kcs[kc];}return k;}/***/}/******/});
+'use strict';/*global jQuery *//*!
+* FitText.js 1.2
+*
+* Copyright 2011, Dave Rupert http://daverupert.com
+* Released under the WTFPL license
+* http://sam.zoy.org/wtfpl/
+*
+* Date: Thu May 05 14:23:00 2011 -0600
+*/(function($){$.fn.fitText=function(kompressor,options){// Setup options
+var compressor=kompressor||1,settings=$.extend({'minFontSize':Number.NEGATIVE_INFINITY,'maxFontSize':Number.POSITIVE_INFINITY},options);return this.each(function(){// Store the object
+var $this=$(this);// Resizer() resizes items based on the object width divided by the compressor * 10
+var resizer=function resizer(){$this.css('font-size',Math.max(Math.min($this.width()/(compressor*10),parseFloat(settings.maxFontSize)),parseFloat(settings.minFontSize)));};// Call once to set.
+resizer();// Call on resize. Opera debounces their resize by default.
+$(window).on('resize.fittext orientationchange.fittext',resizer);});};})(jQuery);
 'use strict';jQuery(document).ready(function($){// Select all links with hashes
 $('a[href*="#"]')// Remove links that don't actually link to anything
 .not('[href="#"]').not('[href="#0"]').click(function(event){// On-page links
@@ -403,6 +417,10 @@ var $target=$(target);$target.focus();if($target.is(":focus")){// Checking if th
 return false;}else{$target.attr('tabindex','-1');// Adding tabindex for elements not focusable
 $target.focus();// Set focus again
 };});}}});});
-"use strict";/*
+'use strict';/*
 * Initialize Foundation Sites plugins
-*/$(document).foundation();
+*/$(document).foundation();/*
+ * Apply fittext to about me title
+ */// $( '.js-fittext' ).fitText(0.15);
+$(window).on('resize',function(){// $( '.js-fittext' ).fitText(0.15);	
+});

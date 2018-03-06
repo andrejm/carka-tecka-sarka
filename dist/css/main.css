@@ -7549,6 +7549,119 @@ a.thumbnail image {
     - usually one rule per class
     - E.g. margin on a button or a text
    ========================================================================== */
+.aboutme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.aboutme__byline {
+  display: none;
+}
+
+@media print, screen and (min-width: 64em) {
+  .aboutme__byline {
+    display: block;
+    width: calc(8.33333% - 1.875rem);
+    margin-right: 0.9375rem;
+    margin-left: 0.9375rem;
+  }
+}
+
+.aboutme__spacer {
+  display: none;
+}
+
+@media print, screen and (min-width: 64em) {
+  .aboutme__spacer {
+    display: block;
+    width: calc(25% - 1.875rem);
+    margin-right: 0.9375rem;
+    margin-left: 0.9375rem;
+  }
+}
+
+.aboutme__photo {
+  width: calc(100% - 1.875rem);
+  margin-right: 0.9375rem;
+  margin-left: 0.9375rem;
+  position: relative;
+}
+
+@media print, screen and (min-width: 40em) {
+  .aboutme__photo {
+    width: calc(50% - 1.875rem);
+    margin-right: 0.9375rem;
+    margin-left: 0.9375rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .aboutme__photo {
+    width: calc(33.33333% - 1.875rem);
+    margin-right: 0.9375rem;
+    margin-left: 0.9375rem;
+  }
+}
+
+.aboutme__bio {
+  width: calc(100% - 1.875rem);
+  margin-right: 0.9375rem;
+  margin-left: 0.9375rem;
+  margin-top: 0.9375rem;
+}
+
+@media print, screen and (min-width: 40em) {
+  .aboutme__bio {
+    width: calc(50% - 1.875rem);
+    margin-right: 0.9375rem;
+    margin-left: 0.9375rem;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    margin-top: 0;
+  }
+  .aboutme__bio p {
+    margin-bottom: 0;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .aboutme__bio {
+    width: calc(33.33333% - 1.875rem);
+    margin-right: 0.9375rem;
+    margin-left: 0.9375rem;
+  }
+}
+
+.aboutme__maintitle {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.aboutme__title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
 footer {
   padding-right: 0.625rem;
   padding-left: 0.625rem;
@@ -7740,6 +7853,107 @@ header {
 
 .navmenu__href:hover {
   color: #E24A4A;
+}
+
+.photorow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.photorow__inner {
+  width: calc(100% - 1.875rem);
+  margin-right: 0.9375rem;
+  margin-left: 0.9375rem;
+}
+
+@media print, screen and (min-width: 40em) {
+  .photorow--row3 .photorow__inner,
+  .photorow--row2 .photorow__inner,
+  .photorow--row1 .photorow__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    position: relative;
+  }
+}
+
+@media print, screen and (min-width: 40em) {
+  .photorow--row1 .photorow__inner {
+    margin-bottom: 40px;
+    position: relative;
+  }
+}
+
+@media print, screen and (min-width: 40em) {
+  .photorow__img4, .photorow__img3, .photorow__img1 {
+    width: 70%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+@media print, screen and (min-width: 40em) {
+  .photorow__img2 {
+    width: 57%;
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+  }
+}
+
+@media print, screen and (min-width: 40em) {
+  .photorow__img1, .photorow__img2 {
+    margin: 0;
+  }
+}
+
+.photorow__row3square, .photorow__row2square {
+  display: none;
+}
+
+@media print, screen and (min-width: 40em) {
+  .photorow__row3square, .photorow__row2square {
+    width: 30%;
+    background-color: #878787;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 4.25rem;
+    border-top: 20px solid #fefefe;
+  }
+}
+
+@media print, screen and (min-width: 40em) {
+  .photorow__row2square {
+    background-color: transparent;
+    position: relative;
+    border-top: 0;
+  }
+  .photorow__row2square::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: red;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 
 .reference-content {

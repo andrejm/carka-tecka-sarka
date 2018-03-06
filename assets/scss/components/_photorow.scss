@@ -1,0 +1,88 @@
+.photorow {
+	@include xy-grid();
+
+	&__inner {
+		@include xy-cell( 12 );
+	}
+
+	&--row3 &__inner,
+	&--row2 &__inner,
+	&--row1 &__inner {
+		@include breakpoint( medium ) {
+			display: flex;
+			flex-flow: row nowrap;
+			position: relative;
+		}
+	}
+
+	&--row1 &__inner {
+		@include breakpoint( medium ) {
+			margin-bottom: 40px;
+			position: relative;
+		}
+	}
+
+	&__img4,
+	&__img3,
+	&__img1 {
+		@include breakpoint( medium ) {
+			width: 70%;
+			height: auto;
+			margin: 0;
+		}
+	}
+
+	&__img2 {
+		@include breakpoint( medium ) {
+			width: 57%;
+			position: absolute;
+		    right: 0;
+		    bottom: -40px;
+			
+		}
+	}
+
+	&__img1,
+	&__img2 {
+		@include breakpoint( medium ) {
+			// min-height: 350px;
+			margin: 0;
+		}
+	}
+
+	
+
+	&__row3square,
+	&__row2square {
+		display: none;
+
+		@include breakpoint( medium ) {
+			width: 30%;
+			background-color: $light-gray;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: rem-calc(68);
+			border-top: 20px solid $white;
+		}
+	}
+
+	&__row2square {
+		@include breakpoint( medium ) {
+			background-color: transparent;
+			position: relative;
+			border-top: 0;
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 50%;
+				height: 50%;
+				background: red;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+		}
+	}
+}

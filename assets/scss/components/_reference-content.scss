@@ -3,9 +3,7 @@
 	border: 0;
 	
 	&__title {
-		font-weight: bold;
-		text-transform: uppercase;
-		font-size: rem-calc( 14 );
+		@include sub-header();
 	}
 
 	&__link {
